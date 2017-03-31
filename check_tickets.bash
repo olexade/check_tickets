@@ -14,7 +14,7 @@ wget -O $of https://uticket.ua/search/train/22200001/22218255/2017-04-29?format=
 
 cat $of | jq '.' | egrep "tosId|freeCount|id\"|locId" > $res
 
-egrep "1020|1025" $res && if [ $? -eq 0 ] ; then cat $res | mailx -s "YAREMCHE" oleksiy.delendyk@gmail.com ; fi
+egrep "1020|1025" $res && if [ $? -eq 0 ] ; then cat $res | mailx -s "YAREMCHE" oleksiy.####@gmail.com ; fi
 
 echo "_______________________________________" >> $hist
 echo `date +%Y-%m-%d_%H:%M:%S` >> $hist
